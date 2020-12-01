@@ -306,7 +306,8 @@ public class Adventure {
                 runNetflix();
             } else {
 
-                System.out.println("Hi");
+                runDisney();
+                runNetflix();
             }
         }
 
