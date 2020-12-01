@@ -300,9 +300,9 @@ public class Adventure {
     public static void main (String[] args) {
 
         for(String arg : args) {
-            if (arg.equals("Disney") || args.equals("disney")) {
+            if (arg.equals("Disney") || arg.equals("disney")) {
                 runDisney();
-            } else if (arg.equals("Netflix") || args.equals("netflix")) {
+            } else if (arg.equals("Netflix") || arg.equals("netflix")) {
                 runNetflix();
             } else {
 
