@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.codecta.academy.DisneyResourceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.599 s <<< FAILURE! - in com.codecta.academy.DisneyResourceTest
+testHelloEndpoint  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.RuntimeException: java.lang.RuntimeException: Failed to start quarkus
+Caused by: java.lang.RuntimeException: Failed to start quarkus
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: <default>] Unable to build Hibernate SessionFactory
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "hibernate"
+
