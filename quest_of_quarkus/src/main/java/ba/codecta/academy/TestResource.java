@@ -203,14 +203,15 @@ public class TestResource {
                 monsterHP = monsterHP + dungeon.getMonsters().get(0).getHp();
             }
         }
-        if(currentDungeon.getItems().get(0).getName().equals("Healing potion")){
+        if(currentDungeon.getItems().get(0).getName().equals("Healing potion") || currentDungeon.getItems().get(0).getId() == 1){
             List<ItemDto> items = new ArrayList<>();
             map.getCurrentPlayer().setHealthPots(40 + map.getCurrentPlayer().getHealthPots());
             currentDungeon.setItems(items);
             qoQService.updateDungeon(currentDungeon);
             qoQService.updatePlayer(map.getCurrentPlayer());
             System.out.println("Healing time!");
-        }else if(currentDungeon.getItems().get(0).getName().equals("Orb of Quarkus") && monsterHP <= 0.0){
+        }else if(currentDungeon.getItems().get(0).getName().equals("Orb of Quarkus") && monsterHP <= 0 || currentDungeon.getItems().get(0).getId() == 2 && monsterHP <= 0){
+            System.out.println("Congratulations, you won the game!");
             return Response.status(Response.Status.OK).entity(winningMsg).build();
         }else{
             return Response.status(Response.Status.BAD_REQUEST).entity(new Error("B4D", "You need to kill the big guy to win the game...")).build();
