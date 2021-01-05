@@ -22,7 +22,7 @@ public class MapEntity extends ModelObject {
     private PlayerEntity currentPlayer;
     @OneToOne
     private DungeonEntity currentDungeon;
-    @OneToMany
+    @OneToMany(mappedBy = "map")
     private List<DungeonEntity> dungeons = new ArrayList<>();
 
     public List<DungeonEntity> getDungeons() {
