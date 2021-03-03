@@ -1,0 +1,23 @@
+.navbar {
+  height: 7vh;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-link:hover,
+a:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 0.5;
+}
